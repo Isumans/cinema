@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Movies & more</title>
+  <link href="main.css" type="text/css" rel="stylesheet">
+  
+</head>
+
+<body>
+  <div class="container">
+    <div class="response-area">
+      <p>
+        <%if (locals.stuff1){%>
+          Title:<%=stuff1%><br>
+          Year:<%=stuff2%><br>
+          Type:<%=stuff3%><br>
+          Genre:<%=stuff4%><br>
+          Website:<%=stuff5%>
+        <%}else{%>
+          <p>Waiting...</p>
+        <%}%>
+        
+        
+
+        
+      </p>
+    </div>
+    <form id="myForm" method="post">
+      <label for="titleInput">Title</label>
+      <input type="text" id="titleInput" name="t">
+
+      <label for="yearInput">Year</label>
+      <input type="text" id="yearInput" name="y">
+
+      <label for="plotInput">Score:</label>
+      <select id="plotinput" name="plot">
+        <option>short</option>
+        <option>full</option>
+
+      </select>
+      
+
+      <label for="submit">Route:</label>
+      <input id="get" type="submit" value="GET" formaction="/get-film">
+     
+    </form>
+  </div>
+</body>
+
+</html>
